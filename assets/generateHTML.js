@@ -38,31 +38,24 @@ function promptUser() {
       name: "name",
       message: "What is your name?"
     },
-    // {
-    //   type: "input",
-    //   name: "location",
-    //   message: "Where are you from?"
-    // },
+    
     {
       type: "input",
       name: "color",
       message: "What is your favorite Color?"
     },
-    // {
-    //   type: "input",
-    //   name: "food",
-    //   message: "What is your favorite food?"
-    // },
+    
     {
       type: "input",
       name: "github",
       message: "Enter your GitHub Username"
     },
-    // {
-    //   type: "input",
-    //   name: "linkedin",
-    //   message: "Enter your LinkedIn URL."
-    // }
+    
+    {
+      type: "input",
+      name: "linkedin",
+      message: "Enter your LinkedIn URL."
+    }
   ]);
 }
 function generateHTML(answers) {
@@ -238,7 +231,7 @@ function generateHTML(answers) {
     <h3 class="from smallHeader">Github: ${answers.gitURL}.</h3>
     <span class="nav-link links-nav">
       <a href="${answers.gitURL}"><p class="links-nav">GitHub</p></a>
-      <a href="${answers.linkedin}"><p class="links-nav">LinkedIn</p></a>
+      <a href="${answers.linkedin}"><p class="links-nav linked">LinkedIn</p></a>
     </span>
   </div>
   </div>
@@ -286,3 +279,5 @@ promptUser()
   .catch(function(err) {
     console.log(err);
   });
+
+  // https://www.linkedin.com/in/jomain-rouser-619166146/
